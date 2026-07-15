@@ -91,7 +91,6 @@ Part VI: Resource Utilization
 Before optimization, the design used 1304 total logic elements, 46 9-bit Multiplier Elements, and 134 registers. After optimization, the design used 1095 total logic elements, 44 9-bit Multiplier Elements, and 203 registers.
 
 
-Operation
 
 
 Latency (Cycles)
@@ -99,18 +98,15 @@ Latency (Cycles)
 
 Part 1: Reciprocal
 
-
 10 cycles
 
 
 Part 2: Square Root
 
-
 12 cycles
 
 
 Part 3: Reciprocal Square Root
-
 
 12 cycles
 
