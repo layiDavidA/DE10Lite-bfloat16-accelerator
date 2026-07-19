@@ -1,5 +1,10 @@
 # Acceleration of Non-Linear Functions Using Newton-Raphson Method  
 
+  <img width="617" height="207" alt="Screenshot 2026-07-18 at 5 04 18 PM" src="https://github.com/user-attachments/assets/04f441a1-5667-4f9b-b244-b59e6c8265f1" />  
+
+    
+
+
 
 Overview  
 The goal of this lab was to design and implement a sequential hardware unit that computes the reciprocal [1/(x)] and the square root [sqrt(x)] of a positive normalized bfloat16 floating-point number using the Newton–Raphson method. The design works by taking a 16-bit bfloat16 number and breaking that into a sign bit, 8-bit biased exponent, and 7-bit fraction fields. The design then uses a seed approximation via ROM, and uses the 5 MSB of the mantissa to index a 32-entry lookup table to fetch an optimized initial numerical guess for the Newton–Raphson method. Next, depending on reciprocal or sqrt, the circuit does two sequential mathematical iterations in Q16.16 format and converges to a true mathematical solution. After the iterations, the exponents are adjusted and shifted depending on whether a reciprocal or a square root was requested. After the mantissa values are finalized and normalization is handled, we convert the final fixed-point results back into 16-bit standard format.
